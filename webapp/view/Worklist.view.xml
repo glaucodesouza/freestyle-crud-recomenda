@@ -54,10 +54,13 @@
 
                 <columns>
                     <Column id="nameColumn">
-                        <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                        <Text text="Cód. de Recomendação" id="nameColumnTitle"/>
                     </Column>
                     <Column id="unitNumberColumn" hAlign="End">
-                        <Text text="{i18n>tableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
+                        <Text text="Descrição de Recomendação" id="unitNumberColumnTitle"/>
+                    </Column>
+                    <Column id="unitNumberColumn2" hAlign="End">
+                        <Text text="Texto de Impl. Guidance" id="unitNumberColumnTitle2"/>
                     </Column>
                 </columns>
 
@@ -68,7 +71,10 @@
                         <cells>
                             <ObjectIdentifier
                                 title="{RecoCode}"/>
-                            <ObjectNumber />
+                            <Text
+                                text="{RecoDesc}"/>
+                            <Text
+                                text="{Implementationguidancetext}"/>
                         </cells>
                     </ColumnListItem>
                 </items>
