@@ -34,6 +34,13 @@ sap.ui.define([
             });
             this.setModel(oViewModel, "worklistView");
 
+            var lista = [
+                {code:'0001',desc: 'teste 1'}
+            ];
+            
+            var oViewModelListbox = new JSONModel({items:lista});
+            this.getView().setModel(oViewModelListbox, "ViewModelListbox");
+
         },
 
         /* =========================================================== */
