@@ -35,7 +35,8 @@ sap.ui.define([
             this.setModel(oViewModel, "worklistView");
 
             var lista = [
-                {code:'0001',desc: 'teste 1'}
+                {code:'0001',desc: 'teste 1'},
+                {code:'0002',desc: 'teste 2'}
             ];
             
             var oViewModelListbox = new JSONModel({items:lista});
