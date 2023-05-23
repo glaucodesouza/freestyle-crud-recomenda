@@ -34,13 +34,28 @@ sap.ui.define([
             });
             this.setModel(oViewModel, "worklistView");
 
-            var lista = [
+            //Forma A de preencher Combobox 1 com dados bobos locais
+            var Listbox = [
                 {code:'0001',desc: 'teste 1'},
                 {code:'0002',desc: 'teste 2'}
             ];
-            
-            var oViewModelListbox = new JSONModel({items:lista});
+            var oViewModelListbox = new JSONModel({items:Listbox});
             this.getView().setModel(oViewModelListbox, "ViewModelListbox");
+
+            //Forma B de preencher Combobox 2 com dados reais da tabela do S/4
+            var Listbox2 = [];
+            var oViewModelListbox2 = new JSONModel({items:Listbox});
+
+			oModel.read("/Z270IMPLGUIDANCESet", {
+				success: function(){
+					sap.m.MessageToast.show('combobox lido com sucesso !');
+                    // oModel.refresh();
+				}.bind(this),
+				error: function(e){
+					//console.error(e);
+				}.bind(this)
+            });
+
 
         },
 

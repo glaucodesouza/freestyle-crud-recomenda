@@ -50,6 +50,8 @@
                                     priority="NeverOverflow"/>
                             </layoutData>
                         </SearchField>
+                        <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                        <Text text="Alterar guia de implementação" />
                         <ComboBox id="_IDGenComboBox1"
                             items="{ViewModelListbox>/items}">
                             <core:Item id="_IDGenItem1" key="{ViewModelListbox>code}" text="{ViewModelListbox>desc}" />
