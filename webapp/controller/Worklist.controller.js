@@ -39,21 +39,32 @@ sap.ui.define([
                 {code:'0001',desc: 'teste 1'},
                 {code:'0002',desc: 'teste 2'}
             ];
+            console.log(Listbox);
             var oViewModelListbox = new JSONModel({items:Listbox});
             this.getView().setModel(oViewModelListbox, "ViewModelListbox");
 
             //Forma B de preencher Combobox 2 com dados reais da tabela do S/4
-            var Listbox2 = [];
-            var oViewModelListbox2 = new JSONModel({items:Listbox});
-
-			oModel.read("/Z270IMPLGUIDANCESet", {
-				success: function(){
-					sap.m.MessageToast.show('combobox lido com sucesso !');
-                    // oModel.refresh();
-				}.bind(this),
-				error: function(e){
-					//console.error(e);
-				}.bind(this)
+            var oViewModelListbox2 = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/sap/Z270CRUD_RECOMENDA_SRV");
+            this.getView().setModel(oViewModelListbox2, "ViewModelListbox2");
+            
+            oViewModelListbox2.read("/Z270IMPLGUIDANCESet", {
+              success: function(oData){ 
+                console.log(oData);
+                var formattedDados = [];
+                let linha = {};
+                for (let oDataLine of oData.results) {
+                  linha.Implementationguidance      = oDataLine.Implementationguidance;
+                  linha.Implementationguidancetext  = oDataLine.Implementationguidancetext;
+                  formattedDados.push(linha);
+                };
+                console.log(formattedDados);
+                var oViewModelListbox3 = new JSONModel({items:formattedDados});
+                this.getView().setModel(oViewModelListbox3,"ViewModelListbox3");
+              }.bind(this),
+              error: function(e){
+                // debugger;
+                console.error(e);
+              }.bind(this)
             });
 
 
