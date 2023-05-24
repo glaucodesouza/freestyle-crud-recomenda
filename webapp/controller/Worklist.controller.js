@@ -56,6 +56,7 @@ sap.ui.define([
                   linha.Implementationguidance      = oDataLine.Implementationguidance;
                   linha.Implementationguidancetext  = oDataLine.Implementationguidancetext;
                   formattedDados.push(linha);
+                  linha = {};
                 };
                 console.log(formattedDados);
                 var oViewModelListbox3 = new JSONModel({items:formattedDados});

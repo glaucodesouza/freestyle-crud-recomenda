@@ -57,7 +57,7 @@
                         </ComboBox>
                         <Text text="Combobox 2" />
                         <ComboBox id="_IDGenComboBox2"
-                            items="{ViewModelListbox3/items}">
+                            items="{ViewModelListbox3>/items}">
                             <core:Item id="_IDGenItem2" key="{ViewModelListbox3>Implementationguidance}" text="{ViewModelListbox3>Implementationguidancetext}" />
                         </ComboBox>
                     </OverflowToolbar>
