@@ -37,7 +37,7 @@
                     <OverflowToolbar id="_IDGenOverflowToolbar1">
                         <Title
                             id="tableHeader"
-                            text="Registros"
+                            text="{worklistView>/worklistTableTitle}"
                             level="H3"/>
                         <ToolbarSpacer id="_IDGenToolbarSpacer1" />
                         <SearchField
@@ -50,12 +50,12 @@
                                     priority="NeverOverflow"/>
                             </layoutData>
                         </SearchField>
-                        <Text text="Combobox 1" />
+                        <Text text="List 1" />
                         <ComboBox id="_IDGenComboBox1"
                             items="{ViewModelListbox>/items}">
                             <core:Item id="_IDGenItem1" key="{ViewModelListbox>code}" text="{ViewModelListbox>desc}" />
                         </ComboBox> 
-                        <Text text="Combobox 2" />
+                        <Text text="List 2" />
                         <ComboBox id="_IDGenComboBox2"
                             items="{ViewModelListbox2a>/items}">
                             <core:Item 
@@ -63,7 +63,7 @@
                               key="{ViewModelListbox2a>Implementationguidance}" 
                               text="{ViewModelListbox2a>Implementationguidancetext}" />
                         </ComboBox> 
-                        <Text text="Combobox 3" />
+                        <Text text="List 3" />
                         <ComboBox id="_IDGenComboBox3"
                             items="{ 
                               path: '/Z270IMPLGUIDANCESet',
