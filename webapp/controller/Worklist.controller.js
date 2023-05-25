@@ -59,8 +59,8 @@ sap.ui.define([
                   linha = {};
                 };
                 console.log(formattedDados);
-                var oViewModelListbox3 = new JSONModel({items:formattedDados});
-                this.getView().setModel(oViewModelListbox3,"ViewModelListbox3");
+                var oViewModelListbox2a = new JSONModel({items:formattedDados});
+                this.getView().setModel(oViewModelListbox2a,"ViewModelListbox2a");
               }.bind(this),
               error: function(e){
                 // debugger;
